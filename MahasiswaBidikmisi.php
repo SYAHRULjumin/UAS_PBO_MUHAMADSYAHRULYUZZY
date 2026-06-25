@@ -19,8 +19,9 @@ class MahasiswaBidikmisi extends Mahasiswa {
         $this->dana_saku_subsidi = $dana_saku_subsidi;
     }
 
-    // Override Method 1: Hitung Tagihan (Bidikmisi gratis, tagihan 0)
+    // Override Method: Hitung Tagihan Bidikmisi
     public function hitungTagihanSemester(): float {
+        // Digratiskan penuh oleh negara, tagihan mutlak 0
         return 0.0;
     }
 

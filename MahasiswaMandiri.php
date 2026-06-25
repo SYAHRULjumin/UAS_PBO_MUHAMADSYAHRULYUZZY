@@ -19,9 +19,10 @@ class MahasiswaMandiri extends Mahasiswa {
         $this->nama_wali = $nama_wali;
     }
 
-    // Override Method 1: Hitung Tagihan (Mandiri bayar full UKT)
+    // Override Method: Hitung Tagihan Mandiri
     public function hitungTagihanSemester(): float {
-        return $this->tarif_ukt_nominal;
+        // Tarif UKT asli ditambah biaya operasional/praktikum flat 100.000
+        return $this->tarif_ukt_nominal + 100000.00;
     }
 
     // Override Method 2: Tampilkan Spesifikasi

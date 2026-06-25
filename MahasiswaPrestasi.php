@@ -18,9 +18,10 @@ class MahasiswaPrestasi extends Mahasiswa {
         $this->minimal_ipk_syarat = $minimal_ipk_syarat;
     }
 
-    // Override Method 1: Hitung Tagihan (Dapet diskon potongan ukt sabit, misal bayar setengahnya)
+    // Override Method: Hitung Tagihan Prestasi
     public function hitungTagihanSemester(): float {
-        return $this->tarif_ukt_nominal * 0.5; 
+        // Potongan 75%, mahasiswa hanya bayar 25% dari tarif UKT asli
+        return $this->tarif_ukt_nominal * 0.25;
     }
 
     // Override Method 2: Tampilkan Spesifikasi
